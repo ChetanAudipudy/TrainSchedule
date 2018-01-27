@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+ <meta charset="UTF-8">
+ <title>Train Schedule</title>
+
+ <!-- jQuery -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+ <!-- Bootstrap CDN-->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+ <!-- Firebase Reference -->
+ <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+
+</head>
+
+<body>
+
+ <div class="container">
+
+   <br>
+
+   <!-- Jumbotron Title -->
+   <div class="jumbotron">
+     <h1 class="text-center">Train Schedule</h1>
+   </div>
+
+   <!-- Current Trains -->
+   <div class="panel panel-primary">
+    <div class="panel-heading">Current Trains</div>
+    <div class="panel-body">
+      <table class="table" >
+        <thead>
+          <tr>
+            <th>Train Name</th>
+            <th>Destination</th>
+            <th>Frequency(in mins)</th>
+            <th>Next Arrival</th>
+            <th>Minutes Away</th>
+            <th>Operations</th>
+          </tr>
+        </thead>
+        <tbody id="trainTableBody"></tbody>
+      </table>
+    </div>
+  </div>
+  <!-- Add a Train -->
+  <div class="panel panel-primary">
+    <div class="panel-heading">Add Train</div>
+    <div class="panel-body">
+      <h4>Train Name</h4>
+      <input type="text" name="train-name" id="train-name">
+      <h4>Destination</h4>
+      <input type="text" name="Dest" id="dest">
+      <h4>First Train Time (HH:mm Military Time)</h4>
+      <input class="form-control" name="start-time" id="start-time" type="time" style="width: auto">
+      <h4>Frequency (min)</h4>
+      <input type="number" name="freq" id="freq">
+      <br>
+      <br>
+      <button type="button" class="btn btn-primary" id="submitBtn">Submit</button>
+    </div>
+  </div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+<!-- Script -->
+<script src="assets/javascript/js.js"></script>
+
+</body>
+
+</html>
